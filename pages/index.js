@@ -4,11 +4,11 @@ function main() {
   const menuMobile = document.querySelector('.header__menu-mobile');
 
   menuBtnOpen.addEventListener('click', () => {
-    menuMobile.style.display = 'inherit';
+    menuMobile.classList.add('is-open');
   });
 
   menuBtnClose.addEventListener('click', () => {
-    menuMobile.style.display = '';
+    menuMobile.classList.remove('is-open');
   });
 }
 

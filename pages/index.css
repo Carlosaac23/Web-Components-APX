@@ -23,7 +23,17 @@ img {
   right: 0;
   left: 0;
   bottom: 0;
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.header__menu-mobile.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .header__menu-toggle {
@@ -40,7 +50,7 @@ img {
   justify-content: center;
   gap: 60px;
   font-size: 2.625rem;
-  font-weight: 600;
+  font-weight: 500;
   list-style: none;
   height: 100%;
   width: 100%;
@@ -49,4 +59,37 @@ img {
 .header__menu-link a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.header__menu-link a:hover {
+  color: #2e347f;
+}
+
+.header__menu-link a:active {
+  color: #2e347f;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome__title {
+  width: 200px;
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin: 50px 0 40px 0;
+}
+
+.welcome__title-name {
+  font-family: 'Geist Mono', Arial, Helvetica, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #2e347f;
+}
+
+.welcome__img {
+  width: 300px;
 }
