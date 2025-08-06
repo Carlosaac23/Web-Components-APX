@@ -10,8 +10,13 @@
   cursor: pointer;
 }
 
-img {
-  width: 50px;
+.header__logo {
+  width: 40px;
+  height: auto;
+}
+
+.header__menu-open {
+  width: 30px;
   height: auto;
 }
 
@@ -42,6 +47,11 @@ img {
   right: 20px;
 }
 
+.header__menu-close {
+  width: 30px;
+  height: auto;
+}
+
 .header__menu-links {
   padding: 0;
   display: flex;
@@ -49,7 +59,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 60px;
-  font-size: 2.625rem;
+  font-size: 2.5rem;
   font-weight: 500;
   list-style: none;
   height: 100%;
@@ -78,14 +88,14 @@ img {
 
 .welcome__title {
   width: 200px;
-  font-size: 3.6rem;
+  font-size: 3.3rem;
   font-weight: 700;
   margin: 50px 0 40px 0;
 }
 
 .welcome__title-name {
   font-family: 'Geist Mono', Arial, Helvetica, sans-serif;
-  font-size: 3.2rem;
+  font-size: 3.1rem;
   font-weight: 700;
   color: #2e347f;
 }
