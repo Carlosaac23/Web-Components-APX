@@ -33,6 +33,7 @@
   transform: translateY(-20px);
   pointer-events: none;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 10;
 }
 
 .header__menu-mobile.is-open {
@@ -101,5 +102,19 @@
 }
 
 .welcome__img {
+  margin-top: 40px;
   width: 300px;
+}
+
+.shadow {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42%;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: -10;
 }
