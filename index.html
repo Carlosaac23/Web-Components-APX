@@ -4,8 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web & Components</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="pages/index.css" />
+    <script src="pages/index.js" defer></script>
   </head>
   <body>
-    <h1>Probando</h1>
+    <header class="header">
+      <a href="./index.html">
+        <img src="images/logo.svg" alt="Logo" class="header__logo" />
+      </a>
+
+      <img src="images/menu-open.svg" alt="Menu" class="header__menu-open" />
+
+      <div class="header__menu-mobile">
+        <div class="header__menu-toggle">
+          <img src="images/menu-close.svg" alt="Menu" class="header__menu-close" />
+        </div>
+        <ul class="header__menu-links">
+          <li class="header__menu-link">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="header__menu-link">
+            <a href="./servicios.html">Servicios</a>
+          </li>
+          <li class="header__menu-link">
+            <a href="./contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </header>
   </body>
 </html>
