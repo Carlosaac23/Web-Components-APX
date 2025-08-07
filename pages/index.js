@@ -5,10 +5,12 @@ function main() {
 
   menuBtnOpen.addEventListener('click', () => {
     menuMobile.classList.add('is-open');
+    document.body.classList.add('no-scroll');
   });
 
   menuBtnClose.addEventListener('click', () => {
     menuMobile.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
   });
 }
 
