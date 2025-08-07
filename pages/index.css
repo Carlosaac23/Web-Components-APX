@@ -128,7 +128,7 @@
   border: none;
   border-radius: 3px;
   background-color: #2e347f;
-  width: 300px;
+  width: 320px;
   height: 6px;
   margin: 0 auto;
 }
@@ -163,6 +163,8 @@
 }
 
 .services {
+  background: url('../images/bg.svg');
+  object-fit: cover;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -182,7 +184,7 @@
 }
 
 .services__card {
-  background-color: rgba(46, 52, 127, 0.45);
+  background-color: rgba(57, 62, 70, 0.5);
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 35px;
@@ -214,6 +216,7 @@
 }
 
 .contact__title {
+  font-size: 2rem;
   padding-top: 20px;
   margin-bottom: 40px;
 }
@@ -241,10 +244,6 @@
   outline: 2px solid #2e347f;
 }
 
-.contact__form-input::placeholder {
-  font-weight: 500;
-}
-
 .contact__form-textarea {
   width: 100%;
   resize: none;
@@ -257,10 +256,6 @@
 
 .contact__form-textarea:focus {
   outline: 2px solid #2e347f;
-}
-
-.contact__form-textarea::placeholder {
-  font-weight: 500;
 }
 
 .contact__form-btn {
@@ -312,6 +307,11 @@
   gap: 12px;
   text-decoration: none;
   color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer__links-link a:hover {
+  color: #2e347f;
 }
 
 .footer__link-icon {
