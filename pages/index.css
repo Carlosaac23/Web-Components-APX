@@ -42,6 +42,11 @@
   pointer-events: auto;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .header__menu-toggle {
   position: absolute;
   top: 30px;
@@ -108,7 +113,7 @@
 
 .shadow {
   position: absolute;
-  bottom: 130px;
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
   width: 160px;
@@ -137,7 +142,7 @@
 
 .about-me__title {
   font-size: 2rem;
-  padding-top: 40px;
+  padding-top: 20px;
   margin-bottom: 40px;
 }
 
@@ -166,7 +171,7 @@
 
 .services__title {
   font-size: 2rem;
-  padding-top: 40px;
+  padding-top: 20px;
   margin-bottom: 40px;
 }
 
@@ -181,6 +186,7 @@
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 35px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .services__card-img {
@@ -204,11 +210,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 .contact__title {
-  padding-top: 40px;
+  padding-top: 20px;
   margin-bottom: 40px;
 }
 
@@ -228,6 +234,7 @@
   height: 35px;
   margin-bottom: 20px;
   padding-left: 10px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .contact__form-input:focus {
@@ -245,6 +252,7 @@
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 5px 0 0 10px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .contact__form-textarea:focus {
@@ -267,10 +275,68 @@
   justify-content: center;
   gap: 10px;
   cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .contact__form-btn-icon {
   width: 20px;
   fill: red;
   stroke: red;
+}
+
+.footer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  width: 70px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.footer__links {
+  padding: 0;
+  list-style: none;
+}
+
+.footer__links-link {
+  margin-bottom: 10px;
+}
+
+.footer__links-link a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__link-icon {
+  width: 24px;
+}
+
+.footer__social {
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.footer__social-link {
+  background-color: #efe7fb;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.footer__social-icon {
+  width: 26px;
+}
+
+.footer__text {
+  margin-top: 50px;
 }
