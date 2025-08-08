@@ -1,141 +1,3 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px;
-}
-
-.header__logo,
-.header__menu-open,
-.header__menu-close {
-  cursor: pointer;
-}
-
-.header__logo {
-  width: 40px;
-  height: auto;
-}
-
-.header__menu-open {
-  width: 30px;
-  height: auto;
-}
-
-.header__menu-mobile {
-  background-color: #1f1f1f;
-  color: #ededed;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  /* display: none; */
-  opacity: 0;
-  transform: translateY(-20px);
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  z-index: 10;
-}
-
-.header__menu-mobile.is-open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-.header__menu-toggle {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-}
-
-.header__menu-close {
-  width: 30px;
-  height: auto;
-}
-
-.header__menu-desktop {
-  display: none;
-}
-
-@media (min-width: 1440px) {
-  .header__menu-desktop {
-    display: initial;
-  }
-
-  .header__menu-open {
-    display: none;
-  }
-
-  .header__menu-mobile {
-    display: none;
-  }
-}
-
-.header__desktop-links {
-  font-size: 1.125rem;
-  list-style: none;
-  display: flex;
-  gap: 42px;
-}
-
-.header__desktop-link > a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.15s ease-in-out;
-  text-underline-offset: 4px;
-}
-
-.header__desktop-link > a:hover {
-  color: #2e347f;
-  text-decoration: underline;
-}
-
-.header__menu-links {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  font-size: 2.5rem;
-  font-weight: 500;
-  list-style: none;
-  height: 100%;
-  width: 100%;
-}
-
-.header__menu-link a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s ease-in-out;
-}
-
-.header__menu-link a:hover {
-  color: #2e347f;
-}
-
-.header__menu-link a:active {
-  color: #2e347f;
-}
-
-.separator__desktop {
-  display: none;
-  height: 1px;
-  background-color: #2e347f;
-}
-
-@media (min-width: 1440px) {
-  .separator__desktop {
-    display: inherit;
-  }
-}
-
 .welcome {
   display: flex;
   flex-direction: column;
@@ -186,21 +48,6 @@
 @media (min-width: 1440px) {
   .welcome__img {
     width: 400px;
-  }
-}
-
-.separator {
-  border: none;
-  border-radius: 3px;
-  background-color: #2e347f;
-  width: 320px;
-  height: 6px;
-  margin: 0 auto;
-}
-
-@media (min-width: 1440px) {
-  .separator {
-    display: none;
   }
 }
 
@@ -284,6 +131,10 @@
   }
 }
 
+.services__cards-container {
+  width: 90%;
+}
+
 .services__title {
   font-size: 2rem;
   padding-top: 20px;
@@ -324,9 +175,10 @@
 }
 
 .services__card-img {
+  width: 100%;
+  height: auto;
   border-radius: 15px;
   margin-bottom: 20px;
-  height: auto;
 }
 
 .services__card-title {
@@ -337,199 +189,5 @@
 
 .services__card-text {
   font-size: 0.95rem;
-}
-
-.contact {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-@media (min-width: 1440px) {
-  .contact {
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-around;
-  }
-}
-
-.contact__title {
-  font-size: 2rem;
-  padding-top: 20px;
-  margin-bottom: 40px;
-}
-
-@media (min-width: 1440px) {
-  .contact__title {
-    font-size: 4rem;
-  }
-}
-
-.contact__form {
-  width: 100%;
-  height: 400px;
-}
-
-@media (min-width: 1440px) {
-  .contact__form {
-    width: 600px;
-  }
-
-  .contact__form-top {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .form-group {
-    flex: 1;
-  }
-}
-
-.contact__form h4 {
-  margin-bottom: 10px;
-}
-
-.contact__form-input {
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  height: 35px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-}
-
-.contact__form-input:focus {
-  outline: 2px solid #2e347f;
-}
-
-.contact__form-textarea {
-  width: 100%;
-  resize: none;
-  border: none;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  padding: 5px 0 0 10px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-}
-
-.contact__form-textarea:focus {
-  outline: 2px solid #2e347f;
-}
-
-.contact__form-btn {
-  background-color: #2e347f;
-  color: #ededed;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  display: flex;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  transition: transform 0.1s ease-in-out;
-}
-
-.contact__form-btn:active {
-  transform: translateY(1.5px);
-}
-
-@media (min-width: 1440px) {
-  .contact__form-btn {
-    width: 230px;
-  }
-}
-
-.contact__form-btn-icon {
-  width: 20px;
-  fill: red;
-  stroke: red;
-}
-
-.footer {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer__logo {
-  width: 70px;
-  height: auto;
-  margin-bottom: 40px;
-}
-
-.footer__links {
-  padding: 0;
-  list-style: none;
-}
-
-@media (min-width: 1440px) {
-  .footer__links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 48px;
-  }
-}
-
-.footer__links-link {
-  margin-bottom: 10px;
-}
-
-@media (min-width: 1440px) {
-  .footer__links-link {
-    margin: 0;
-  }
-}
-
-.footer__links-link a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s ease-in-out;
-}
-
-@media (min-width: 1440px) {
-  .footer__links-link a {
-    gap: 2px;
-  }
-}
-
-.footer__links-link a:hover {
-  color: #2e347f;
-}
-
-.footer__link-icon {
-  width: 24px;
-}
-
-.footer__social {
-  margin-top: 20px;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.footer__social-link {
-  background-color: #efe7fb;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-}
-
-.footer__social-icon {
-  width: 26px;
-}
-
-.footer__text {
-  margin-top: 50px;
+  text-align: justify;
 }
