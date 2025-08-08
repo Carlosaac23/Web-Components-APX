@@ -33,6 +33,37 @@ function main() {
         </button>
       </form>
     </section>`;
+
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const API_APX = 'https://apx.school/api/utils/email-to-student';
+    const emailData = document.getElementById('email').value;
+    const messageData = document.getElementById('message').value;
+
+    try {
+      const res = await fetch(API_APX, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          to: emailData,
+          message: messageData,
+        }),
+      });
+
+      if (!res.ok) {
+        alert('Error al enviar el correo ❌');
+      }
+
+      alert('Correo enviado correctamente ✅');
+      form.reset();
+    } catch (error) {
+      console.error('Error al enviar el correo:', error);
+      alert('Error de conexión ❌');
+    }
+  });
 }
 
 main();
