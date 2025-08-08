@@ -109,3 +109,34 @@
   fill: red;
   stroke: red;
 }
+
+/* Alerts */
+.alert-message--error {
+  margin-bottom: 15px;
+  text-align: center;
+  color: red;
+  background-color: #ffebee;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.alert-message--success {
+  margin-bottom: 15px;
+  text-align: center;
+  color: green;
+  background-color: #bee3be;
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.alert-message--warning {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ffa602;
+  background-color: #fefada;
+  border: 1px solid rgb(255, 196, 0);
+  border-radius: 10px;
+  padding: 10px;
+}
