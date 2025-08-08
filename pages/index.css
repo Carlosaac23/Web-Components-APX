@@ -111,19 +111,6 @@
   width: 300px;
 }
 
-.shadow {
-  position: absolute;
-  bottom: 110px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 160px;
-  height: 15px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  filter: blur(2px);
-  z-index: -10;
-}
-
 .separator {
   border: none;
   border-radius: 3px;
@@ -184,11 +171,12 @@
 }
 
 .services__card {
-  background-color: rgba(57, 62, 70, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 35px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  backdrop-filter: blur(2px);
 }
 
 .services__card-img {
