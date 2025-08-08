@@ -6,3 +6,30 @@ body {
   background-color: #ededed;
   color: #1f1f1f;
 }
+
+.separator {
+  border: none;
+  border-radius: 3px;
+  background-color: #2e347f;
+  width: 320px;
+  height: 6px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+  .separator {
+    display: none;
+  }
+}
+
+.separator__desktop {
+  display: none;
+  height: 1px;
+  background-color: #2e347f;
+}
+
+@media (min-width: 1440px) {
+  .separator__desktop {
+    display: inherit;
+  }
+}
