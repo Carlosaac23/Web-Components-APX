@@ -1,8 +1,13 @@
 function main() {
-  const container = document.querySelector('.header__container');
+  const headerContainer = document.querySelector('.header__container');
 
-  container.innerHTML = `
-  <header class="header">
+  if (!headerContainer) {
+    console.error('Header container not found');
+    return;
+  }
+
+  headerContainer.innerHTML = `
+   <header class="header">
       <a href="./index.html">
         <img src="images/logo.svg" alt="Logo" class="header__logo" />
       </a>
@@ -18,7 +23,7 @@ function main() {
             <a href="./index.html">Home</a>
           </li>
           <li class="header__menu-link">
-            <a href="./services.html">Servicios</a>
+            <a href="./projects.html">Proyectos</a>
           </li>
           <li class="header__menu-link">
             <a href="./contact.html">Contacto</a>
@@ -32,7 +37,7 @@ function main() {
             <a href="./index.html">Home</a>
           </li>
           <li class="header__desktop-link">
-            <a href="./services.html">Servicios</a>
+            <a href="./projects.html">Proyectos</a>
           </li>
           <li class="header__desktop-link">
             <a href="./contact.html">Contacto</a>
