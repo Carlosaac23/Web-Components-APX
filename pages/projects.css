@@ -1,0 +1,103 @@
+.projects__welcome {
+  padding: 230px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1440px) {
+  .projects__welcome {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.projects__title {
+  text-align: center;
+  font-size: 3.5rem;
+  line-height: 60px;
+}
+
+@media (min-width: 1440px) {
+  .projects__title {
+    text-align: left;
+    font-size: 6rem;
+    width: 586px;
+    line-height: 96px;
+  }
+}
+
+.projects__title-name {
+  font-family: 'Geist Mono', Arial, Helvetica, sans-serif;
+  color: #2e347f;
+}
+
+.projects__img {
+  width: 230px;
+}
+
+@media (min-width: 1440px) {
+  .projects__img {
+    width: 300px;
+  }
+}
+
+.projects {
+  background: url('../images/bg.svg');
+  object-fit: cover;
+  padding: 60px 30px;
+}
+
+@media (min-width: 1440px) {
+  .projects {
+    display: flex;
+    justify-content: space-around;
+    gap: 65px;
+    padding: 100px 170px;
+  }
+}
+
+.projects__card {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  backdrop-filter: blur(2px);
+}
+
+@media (min-width: 1440px) {
+  .projects__card {
+    width: 322px;
+  }
+}
+
+.projects__card-img {
+  border-radius: 12px;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.projects__card-title {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+.projects__card-description {
+  text-align: justify;
+  font-size: 0.95rem;
+}
+
+.projects__card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2e347f;
+  text-decoration: none;
+  font-weight: bold;
+  text-underline-offset: 2px;
+}
+
+.projects__card-link:hover {
+  text-decoration: underline;
+}
