@@ -13,7 +13,7 @@ function main() {
 
           <div class="form-group">
             <h4>Email</h4>
-            <input type="email" name="" id="" required class="contact__form-input" placeholder="tu@email.com" />
+            <input type="email" name="" id="" required autofocus class="contact__form-input" placeholder="tu@email.com" />
           </div>
         </div>
 
