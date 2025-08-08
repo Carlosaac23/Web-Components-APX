@@ -55,6 +55,7 @@ function main() {
 
       if (!res.ok) {
         alert('Error al enviar el correo ❌');
+	return;
       }
 
       alert('Correo enviado correctamente ✅');
