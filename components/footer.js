@@ -1,7 +1,12 @@
 function main() {
-  const container = document.querySelector('.footer__container');
+  const footerContainer = document.querySelector('.footer__container');
 
-  container.innerHTML = `
+  if (!footerContainer) {
+    console.error('Header container not found');
+    return;
+  }
+
+  footerContainer.innerHTML = `
   <footer class="footer">
       <img src="images/logo.svg" alt="Logo" class="footer__logo" />
 
@@ -13,9 +18,9 @@ function main() {
           </a>
         </li>
         <li class="footer__links-link">
-          <a href="./services.html">
+          <a href="./projects.html">
             <img src="images/user.svg" alt="" class="footer__link-icon" />
-            Servicios
+            Proyectos
           </a>
         </li>
         <li class="footer__links-link">
