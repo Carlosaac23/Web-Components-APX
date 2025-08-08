@@ -9,22 +9,22 @@ function main() {
   formContainer.innerHTML = `
   <section class="contact">
       <h2 class="contact__title">Escríbeme</h2>
-      <form action="" class="contact__form">
+      <form id="contactForm" class="contact__form">
         <div class="contact__form-top">
           <div class="form-group">
             <h4>Nombre</h4>
-            <input type="text" name="" id="" required class="contact__form-input" placeholder="Tu nombre" />
+            <input type="text" name="name" id="name" required class="contact__form-input" placeholder="Tu nombre" />
           </div>
 
           <div class="form-group">
             <h4>Email</h4>
-            <input type="email" name="" id="" required class="contact__form-input" placeholder="tu@email.com" />
+            <input type="email" name="email" id="email" required class="contact__form-input" placeholder="tu@email.com" />
           </div>
         </div>
 
         <div class="contact__form-bottom">
           <h4>Mensaje</h4>
-          <textarea name="" id="" required rows="8" class="contact__form-textarea" placeholder="Tu mensaje"></textarea>
+          <textarea name="message" id="message" required rows="8" class="contact__form-textarea" placeholder="Tu mensaje"></textarea>
         </div>
 
         <button class="contact__form-btn">
