@@ -91,7 +91,11 @@
   gap: 10px;
   cursor: pointer;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.contact__form-btn:hover {
+  opacity: 0.8;
 }
 
 .contact__form-btn:active {
@@ -100,7 +104,7 @@
 
 @media (min-width: 1440px) {
   .contact__form-btn {
-    width: 230px;
+    width: 200px;
   }
 }
 
