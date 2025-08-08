@@ -34,7 +34,23 @@
           </li>
         </ul>
       </div>
+
+      <div class="header__menu-desktop">
+        <ul class="header__desktop-links">
+          <li class="header__desktop-link">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="header__desktop-link">
+            <a href="./services.html">Servicios</a>
+          </li>
+          <li class="header__desktop-link">
+            <a href="./contact.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
     </header>
+
+    <div class="separator__desktop"></div>
 
     <section class="welcome">
       <h1 class="welcome__title">Hola Soy <span class="welcome__title-name">Carlos</span></h1>
@@ -42,18 +58,24 @@
     </section>
 
     <div class="separator"></div>
+    <div class="separator__desktop"></div>
 
     <section class="about-me">
-      <h2 class="about-me__title">Soy <span class="about-me__title-name">Carlos</span></h2>
-      <p class="about-me__description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis id, dolorum ut, magnam dolore nisi sequi reprehenderit, velit voluptate ratione
-        sunt in quaerat quasi perferendis aperiam. Earum, itaque aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis id, dolorum ut,
-        magnam dolore nisi.
-      </p>
-      <img src="images/me.png" alt="Image of me" class="about-me__img" />
+      <div class="about-me__left">
+        <h2 class="about-me__title">Soy <span class="about-me__title-name">Carlos</span></h2>
+        <p class="about-me__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis id, dolorum ut, magnam dolore nisi sequi reprehenderit, velit voluptate ratione
+          sunt in quaerat quasi perferendis aperiam. Earum, itaque aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis id, dolorum ut,
+          magnam dolore nisi.
+        </p>
+      </div>
+      <div class="about-me__right">
+        <img src="images/me.png" alt="Image of me" class="about-me__img" />
+      </div>
     </section>
 
     <div class="separator"></div>
+    <div class="separator__desktop"></div>
 
     <div class="services">
       <h2 class="services__title">Mis <span class="services__title-code">Servicios</span></h2>
@@ -86,18 +108,27 @@
     </div>
 
     <div class="separator"></div>
+    <div class="separator__desktop"></div>
 
     <section class="contact">
       <h2 class="contact__title">Escríbeme</h2>
       <form action="" class="contact__form">
-        <h4>Nombre</h4>
-        <input type="text" name="" id="" required class="contact__form-input" placeholder="Tu nombre" />
+        <div class="contact__form-top">
+          <div class="form-group">
+            <h4>Nombre</h4>
+            <input type="text" name="" id="" required class="contact__form-input" placeholder="Tu nombre" />
+          </div>
 
-        <h4>Email</h4>
-        <input type="email" name="" id="" required class="contact__form-input" placeholder="tu@email.com" />
+          <div class="form-group">
+            <h4>Email</h4>
+            <input type="email" name="" id="" required class="contact__form-input" placeholder="tu@email.com" />
+          </div>
+        </div>
 
-        <h4>Mensaje</h4>
-        <textarea name="" id="" required rows="8" class="contact__form-textarea" placeholder="Tu mensaje"></textarea>
+        <div class="contact__form-bottom">
+          <h4>Mensaje</h4>
+          <textarea name="" id="" required rows="8" class="contact__form-textarea" placeholder="Tu mensaje"></textarea>
+        </div>
 
         <button class="contact__form-btn">
           Enviar
@@ -107,6 +138,7 @@
     </section>
 
     <div class="separator"></div>
+    <div class="separator__desktop"></div>
 
     <footer class="footer">
       <img src="images/logo.svg" alt="Logo" class="footer__logo" />
