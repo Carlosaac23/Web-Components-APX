@@ -1,0 +1,137 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.header__logo,
+.header__menu-open,
+.header__menu-close {
+  cursor: pointer;
+}
+
+.header__logo {
+  width: 40px;
+  height: auto;
+}
+
+.header__menu-open {
+  width: 30px;
+  height: auto;
+}
+
+.header__menu-mobile {
+  background-color: #1f1f1f;
+  color: #ededed;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  /* display: none; */
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.header__menu-mobile.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.header__menu-toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.header__menu-close {
+  width: 30px;
+  height: auto;
+}
+
+.header__menu-desktop {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .header__menu-desktop {
+    display: initial;
+  }
+
+  .header__menu-open {
+    display: none;
+  }
+
+  .header__menu-mobile {
+    display: none;
+  }
+}
+
+.header__desktop-links {
+  font-size: 1.125rem;
+  list-style: none;
+  display: flex;
+  gap: 42px;
+}
+
+.header__desktop-link > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+  text-underline-offset: 4px;
+}
+
+.header__desktop-link > a:hover {
+  color: #2e347f;
+  text-decoration: underline;
+}
+
+.header__menu-links {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+}
+
+.header__menu-link a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.header__menu-link a:hover {
+  color: #2e347f;
+}
+
+.header__menu-link a:active {
+  color: #2e347f;
+}
+
+.separator__desktop {
+  display: none;
+  height: 1px;
+  background-color: #2e347f;
+}
+
+@media (min-width: 1440px) {
+  .separator__desktop {
+    display: inherit;
+  }
+}
