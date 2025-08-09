@@ -5,6 +5,10 @@ body {
   font-size: 1rem;
   background-color: #ededed;
   color: #1f1f1f;
+
+  --sb-track-color: #ededed;
+  --sb-thumb-color: #2e347f;
+  --sb-size: 11px;
 }
 
 .separator {
@@ -31,5 +35,45 @@ body {
 @media (min-width: 1440px) {
   .separator__desktop {
     display: inherit;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.projects__card-description::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.projects__card-description::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+.projects__card-description::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .projects__card-description {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
