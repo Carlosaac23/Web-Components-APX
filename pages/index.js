@@ -1,4 +1,44 @@
-function main() {
+async function getServices() {
+  const SPACE_ID = '6d07ippi0mdt';
+  const ENVIRONMENT_ID = 'master';
+  const CONTENT_TYPE_ID = 'productos'; // 'productos' is the ID of Servicios
+  const ACCESS_TOKEN = 'BmlxfqdmBXnbx4-v7pdK5z41vqOyhZAfu9EVJmcAWsI';
+
+  const res = await fetch(
+    `https://preview.contentful.com/spaces/${SPACE_ID}/environments/${ENVIRONMENT_ID}/entries?access_token=${ACCESS_TOKEN}&content_type=${CONTENT_TYPE_ID}`
+  );
+
+  const data = await res.json();
+
+  return data.items.map(item => {
+    const imageId = item.fields.foto.sys.id;
+    const asset = data.includes.Asset.find(asset => asset.sys.id === imageId);
+    const imageUrl = asset ? `https:${asset.fields.file.url}` : '';
+
+    return {
+      image: imageUrl,
+      title: item.fields.nombre || 'Sin título',
+      description: item.fields.descripcion || 'Sin descripción',
+    };
+  });
+}
+
+function addServiceCard(service) {
+  const { image, title, description } = service;
+  const servicesContainer = document.querySelector('.services__cards-container');
+  const serviceCard = document.createElement('div');
+  serviceCard.classList.add('services__card');
+
+  serviceCard.innerHTML = `
+    <img src=${image} alt="A project image" class="services__card-img" />
+    <h3 class="services__card-title">${title}</h3>
+    <p class="services__card-text">${description}</p>
+  `;
+
+  servicesContainer.appendChild(serviceCard);
+}
+
+async function main() {
   const indexContainer = document.querySelector('.index__container');
 
   if (!indexContainer) {
@@ -32,33 +72,17 @@ function main() {
 
     <div class="services">
       <h2 class="services__title">Mis <span class="services__title-code">Servicios</span></h2>
-      <div class="services__cards-container">
-        <div class="services__card">
-          <img src="images/webpage.png" alt="A project image" class="services__card-img" />
-          <h3 class="services__card-title">Desarrollo de páginas web</h3>
-          <p class="services__card-text">
-            Lorem ipsum dolor sit amet jeje adipisicing elit. Necessitatibus velit iure a, dicta quibusdam error deleniti libero ut eligendi aliquid aspernatur
-            officia.
-          </p>
-        </div>
-        <div class="services__card">
-          <img src="images/animations.png" alt="A project image" class="services__card-img" />
-          <h3 class="services__card-title">Animaciones para web webs</h3>
-          <p class="services__card-text">
-            Lorem ipsum dolor sit amet jeje adipisicing elit. Necessitatibus velit iure a, dicta quibusdam error deleniti libero ut eligendi aliquid aspernatur
-            officia.
-          </p>
-        </div>
-        <div class="services__card">
-          <img src="images/apps.png" alt="A project image" class="services__card-img" />
-          <h3 class="services__card-title">Desarrollo de apps</h3>
-          <p class="services__card-text">
-            Lorem ipsum dolor sit amet jeje adipisicing elit. Necessitatibus velit iure a, dicta quibusdam error deleniti libero ut eligendi aliquid aspernatur
-            officia.
-          </p>
-        </div>
-      </div>
+      <div class="services__cards-container"></div>
     </div>`;
+
+  try {
+    const services = await getServices();
+    for (const service of services) {
+      addServiceCard(service);
+    }
+  } catch (error) {
+    console.error('Error cargando los servicios:', error);
+  }
 }
 
 main();
