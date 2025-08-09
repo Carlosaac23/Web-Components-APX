@@ -138,9 +138,9 @@
 .alert-message--warning {
   margin-bottom: 15px;
   text-align: center;
-  color: #ffa602;
-  background-color: #fefada;
-  border: 1px solid rgb(255, 196, 0);
+  color: #ffc402;
+  background-color: #f8f0d6;
+  border: 1px solid #ffc402;
   border-radius: 10px;
   padding: 10px;
 }
