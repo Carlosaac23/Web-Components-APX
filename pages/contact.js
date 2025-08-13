@@ -46,9 +46,6 @@ function main() {
     const emailData = document.getElementById('email').value;
     const messageData = document.getElementById('message').value;
 
-    const alertMessageContainer = document.getElementById('alertMessage');
-    const alertMessage = document.createElement('p');
-
     try {
       const res = await fetch(API_APX, {
         method: 'POST',
@@ -60,37 +57,34 @@ function main() {
       });
 
       if (nameData === '' || emailData === '' || messageData === '') {
-        alertMessage.classList.add('alert-message--warning');
-        alertMessage.textContent = '¡Por favor, completa todos los campos!';
-        alertMessageContainer.appendChild(alertMessage);
-        setTimeout(() => {
-          alertMessage.remove();
-        }, 2500);
+        showAlertMessage('¡Por favor, completa todos los campos!', 'warning');
         return;
       }
 
       if (!res.ok) {
-        alertMessage.classList.add('alert-message--error');
-        alertMessage.textContent = 'Error al enviar el correo';
-        alertMessageContainer.appendChild(alertMessage);
-        setTimeout(() => {
-          alertMessage.remove();
-        }, 2500);
+        showAlertMessage('Error al enviar el correo', 'error');
         return;
       }
 
-      alertMessage.classList.add('alert-message--success');
-      alertMessage.textContent = '¡Correo enviado correctamente!';
-      alertMessageContainer.appendChild(alertMessage);
-      setTimeout(() => {
-        alertMessage.remove();
-      }, 2500);
+      showAlertMessage('¡Correo enviado correctamente!', 'success');
       form.reset();
     } catch (error) {
       console.error('Error al enviar el correo:', error);
       alert('Error de conexión ❌');
     }
   });
+}
+
+// success, error and warning are the three types of messages
+function showAlertMessage(message, type) {
+  const alertMessageContainer = document.getElementById('alertMessage');
+  const alertMessage = document.createElement('p');
+
+  alertMessage.classList.add(`alert-message--${type}`);
+  alertMessage.textContent = message;
+
+  alertMessageContainer.appendChild(alertMessage);
+  setTimeout(() => alertMessage.remove(), 2500);
 }
 
 main();
