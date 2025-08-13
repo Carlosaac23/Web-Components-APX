@@ -85,16 +85,21 @@
   gap: 42px;
 }
 
+.header__desktop-link {
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: background-color 0.18s ease-in-out;
+}
+
+.header__desktop-link:hover {
+  background-color: #dddcdc;
+}
+
 .header__desktop-link > a {
   color: inherit;
   text-decoration: none;
   transition: color 0.15s ease-in-out;
   text-underline-offset: 2px;
-}
-
-.header__desktop-link > a:hover {
-  color: #2e347f;
-  text-decoration: underline;
 }
 
 .header__menu-links {
