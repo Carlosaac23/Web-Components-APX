@@ -14,6 +14,7 @@
 .footer__links {
   padding: 0;
   list-style: none;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 1440px) {
@@ -26,7 +27,13 @@
 }
 
 .footer__links-link {
-  margin-bottom: 10px;
+  padding: 10px 12px;
+  transition: background-color 0.18s ease-in;
+  border-radius: 10px;
+}
+
+.footer__links-link:hover {
+  background-color: #dddcdc;
 }
 
 @media (min-width: 1440px) {
@@ -41,17 +48,12 @@
   gap: 12px;
   text-decoration: none;
   color: inherit;
-  transition: color 0.2s ease-in-out;
 }
 
 @media (min-width: 1440px) {
   .footer__links-link a {
     gap: 2px;
   }
-}
-
-.footer__links-link a:hover {
-  color: #2e347f;
 }
 
 .footer__link-icon {
