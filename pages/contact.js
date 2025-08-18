@@ -84,7 +84,13 @@ function showAlertMessage(message, type) {
   alertMessage.textContent = message;
 
   alertMessageContainer.appendChild(alertMessage);
-  setTimeout(() => alertMessage.remove(), 2500);
+  setTimeout(() => {
+    alertMessage.classList.add('hide');
+
+    alertMessage.addEventListener('animationend', () => {
+      alertMessage.remove();
+    });
+  }, 2500);
 }
 
 main();
