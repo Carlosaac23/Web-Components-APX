@@ -115,32 +115,59 @@
 }
 
 /* Alerts */
-.alert-message--error {
-  margin-bottom: 15px;
+.alert-message--error,
+.alert-message--success,
+.alert-message--warning {
   text-align: center;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  animation: show 0.3s ease-in-out;
+}
+
+.alert-message--error {
   color: red;
   background-color: #ffebee;
   border: 1px solid red;
-  border-radius: 10px;
-  padding: 10px;
 }
 
 .alert-message--success {
-  margin-bottom: 15px;
-  text-align: center;
   color: green;
   background-color: #bee3be;
   border: 1px solid green;
-  border-radius: 10px;
-  padding: 10px;
 }
 
 .alert-message--warning {
-  margin-bottom: 15px;
-  text-align: center;
-  color: #ffc402;
-  background-color: #f8f0d6;
-  border: 1px solid #ffc402;
-  border-radius: 10px;
-  padding: 10px;
+  color: #d19500;
+  background-color: #fffee7;
+  border: 1px solid #d19500;
+}
+
+.alert-message--warning.hide,
+.alert-message--success.hide,
+.alert-message--error.hide {
+  animation: hide 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
 }
