@@ -56,14 +56,13 @@ function main() {
         }),
       });
 
-      if (nameData === '' || emailData === '' || messageData === '') {
-        showAlertMessage('¡Por favor, completa todos los campos!', 'warning');
-        return;
+      const inputs = [nameData, emailData, messageData].some(input => input.trim() === '');
+      if (inputs) {
+        return showAlertMessage('¡Por favor, completa todos los campos!', 'warning');
       }
 
       if (!res.ok) {
-        showAlertMessage('Error al enviar el correo', 'error');
-        return;
+        return showAlertMessage('Error al enviar el correo', 'error');
       }
 
       showAlertMessage('¡Correo enviado correctamente!', 'success');
