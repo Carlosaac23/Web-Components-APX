@@ -47,8 +47,7 @@ async function main() {
   const projectsContainer = document.querySelector('.projects__container');
 
   if (!projectsContainer) {
-    console.error('Header container not found');
-    return;
+    return console.error('Header container not found');
   }
 
   projectsContainer.innerHTML = `
