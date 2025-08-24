@@ -35,7 +35,7 @@ function addProjectCard(project) {
     <img src=${image} alt="A project image" class="projects__card-img" />
     <h2 class="projects__card-title">${title}</h2>
     <p class="projects__card-description">${description}</p>
-    <a href=${url} target="_blank" class="projects__card-link">Ver proyecto
+    <a href=${url} target="_blank" rel="noopener noreferrer" class="projects__card-link">Ver proyecto
     <img src="images/link.svg" alt="Link icon" class="projects__card-link-icon" />
     </a>
   `;
