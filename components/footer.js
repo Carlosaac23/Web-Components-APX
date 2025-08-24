@@ -33,17 +33,17 @@ function main() {
 
       <ul class="footer__social">
         <li class="footer__social-link">
-          <a href="https://www.linkedin.com/in/carlos-acosta-7aa448263/" target="_blank">
+          <a href="https://www.linkedin.com/in/carlos-acosta-7aa448263/" target="_blank" rel="noopener noreferrer">
             <img src="images/linkedin.svg" alt="" class="footer__social-icon" />
           </a>
         </li>
         <li class="footer__social-link">
-          <a href="https://github.com/Carlosaac23" target="_blank">
+          <a href="https://github.com/Carlosaac23" target="_blank" rel="noopener noreferrer">
             <img src="images/github.svg" alt="" class="footer__social-icon" />
           </a>
         </li>
         <li class="footer__social-link">
-          <a href="https://x.com/Carlosaac23" target="_blank">
+          <a href="https://x.com/Carlosaac23" target="_blank" rel="noopener noreferrer">
             <img src="images/twitter.svg" alt="" class="footer__social-icon" />
           </a>
         </li>
